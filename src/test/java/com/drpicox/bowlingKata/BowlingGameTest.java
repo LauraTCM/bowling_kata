@@ -59,5 +59,4 @@ public class BowlingGameTest {
         g.roll(5);
     }
 
-
 }
