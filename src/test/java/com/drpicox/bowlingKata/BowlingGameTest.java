@@ -10,18 +10,24 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 public class BowlingGameTest {
+    private Game g;
+
+    @Before
+    public void setUp() throws Exception {
+        g = new Game();
+    }
 
     @Test
-    public void gutterGame(){
-        Game g = new Game();
-        for (int i = 0; i<20; i++)
-            g.roll(0);
-        assertThat(g.score(), is(0));
+    public void gutterGame() throws Exception {
+        int n = 20;
+        int pins = 0;
+        for (int i = 0; i<n; i++)
+            g.roll(pins);
+        assertEquals(0, g.score());
     }
 
     @Test
     public void testAllOnes() throws Exception{
-        Game g = new Game();
         for(int i = 0; i<20; i++)
             g.roll(1);
             assertEquals(20, g.score());
