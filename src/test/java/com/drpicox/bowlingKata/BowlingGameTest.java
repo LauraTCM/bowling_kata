@@ -19,11 +19,13 @@ public class BowlingGameTest {
 
     @Test
     public void gutterGame() throws Exception {
-        int n = 20;
-        int pins = 0;
-        for (int i = 0; i<n; i++)
-            g.roll(pins);
+        rollMany(20,0);
         assertEquals(0, g.score());
+    }
+
+    public void rollMany(int n, int pins){
+        for(int i = 0; i<n; i++)
+            g.roll(pins);
     }
 
     @Test
@@ -33,6 +35,8 @@ public class BowlingGameTest {
             assertEquals(20, g.score());
 
     }
+
+
 
 
 }
