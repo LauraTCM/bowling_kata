@@ -10,5 +10,10 @@ import static org.junit.Assert.assertThat;
 
 public class BowlingGameTest {
 
+    @Test
+    public void gutterGame(){
+        Game g = new Game();
+    }
+
 
 }
